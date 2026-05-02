@@ -29,6 +29,7 @@ export function Nav({ dict, lang }: Props) {
   const links = [
     { href: "/chi-sono", label: dict.chiSono },
     { href: "/servizi", label: dict.servizi },
+    { href: "/biodescodificacion", label: dict.biodescodificacion },
     { href: "/contatti", label: dict.contatti },
   ];
 
