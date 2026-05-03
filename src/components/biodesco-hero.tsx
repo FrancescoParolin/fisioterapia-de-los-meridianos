@@ -20,7 +20,7 @@ export function BiodescHero({ label, h1, h1em, subtitle, cta, stat1, stat2, stat
   return (
     <section
       className="relative overflow-hidden border-b border-border/60"
-      style={{ minHeight: "100svh", background: "#fdf9f3" }}
+      style={{ background: "#fdf9f3" }}
     >
       {/* warm radial blush from top-right */}
       <div
@@ -48,7 +48,7 @@ export function BiodescHero({ label, h1, h1em, subtitle, cta, stat1, stat2, stat
         }}
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 flex flex-col justify-center" style={{ minHeight: "100svh", paddingTop: "6rem", paddingBottom: "4rem" }}>
+      <div className="relative mx-auto max-w-6xl px-6 flex flex-col" style={{ paddingTop: "clamp(8rem, 18vh, 11rem)", paddingBottom: "5rem" }}>
         {/* label */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
@@ -70,8 +70,8 @@ export function BiodescHero({ label, h1, h1em, subtitle, cta, stat1, stat2, stat
 
         {/* main headline — line by line */}
         <h1
-          className="font-display leading-[0.97] tracking-tight mb-8"
-          style={{ fontSize: "clamp(3.2rem, 9.5vw, 8.5rem)" }}
+          className="font-display leading-[1.0] tracking-tight mb-8"
+          style={{ fontSize: "clamp(2.6rem, 5.5vw, 5.5rem)" }}
         >
           <motion.span
             className="block"
@@ -137,12 +137,12 @@ export function BiodescHero({ label, h1, h1em, subtitle, cta, stat1, stat2, stat
           </motion.div>
         </div>
 
-        {/* trust row — bottom */}
+        {/* trust row — inline flow */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, delay: 1.8 }}
-          className="absolute bottom-10 left-6 right-6 flex flex-wrap gap-x-8 gap-y-2 text-xs"
+          className="flex flex-wrap gap-x-8 gap-y-2 text-xs mt-12"
           style={{ color: "oklch(from var(--color-foreground) l c h / 0.35)" }}
         >
           {[stat1, stat2, stat3].map((s, i) => (
